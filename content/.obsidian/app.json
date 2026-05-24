@@ -1,0 +1,10 @@
+{
+  "newFileLocation": "folder",
+  "newFileFolderPath": "",
+  "attachmentFolderPath": "assets",
+  "showUnsupportedFiles": false,
+  "showLineNumber": true,
+  "defaultViewMode": "source",
+  "livePreview": false,
+  "promptDelete": false
+}

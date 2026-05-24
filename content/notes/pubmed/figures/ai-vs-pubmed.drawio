@@ -1,0 +1,52 @@
+<mxfile host="app.diagrams.net" agent="Claude (initial scaffold)" version="22.0.0">
+  <diagram name="ai-vs-pubmed" id="av1">
+    <mxGraphModel dx="900" dy="420" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="900" pageHeight="380" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="t" value="AI scouts vs PubMed: who does what" style="text;html=1;align=center;fontSize=13;fontStyle=1;fontColor=#0D2F42;" vertex="1" parent="1">
+          <mxGeometry x="240" y="8" width="420" height="24" as="geometry"/>
+        </mxCell>
+        <mxCell id="laneA" value="AI scouts — discovery, summary, graph walking" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FAF6F1;strokeColor=#0082B1;fontFamily=Atkinson Hyperlegible Next;fontSize=11;fontStyle=1;fontColor=#0082B1;align=left;verticalAlign=top;spacingLeft=20;spacingTop=10;" vertex="1" parent="1">
+          <mxGeometry x="20" y="55" width="860" height="120" as="geometry"/>
+        </mxCell>
+        <mxCell id="elicit" value="Elicit&#xa;extract findings tables&#xa;across hundreds of papers&#xa;from one prompt" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EAE1D7;strokeColor=#0082B1;fontFamily=Atkinson Hyperlegible Next;fontSize=9;fontColor=#0D2F42;" vertex="1" parent="1">
+          <mxGeometry x="40" y="92" width="150" height="68" as="geometry"/>
+        </mxCell>
+        <mxCell id="consensus" value="Consensus&#xa;aggregates yes/no/mixed&#xa;across studies for a specific question" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EAE1D7;strokeColor=#0082B1;fontFamily=Atkinson Hyperlegible Next;fontSize=9;fontColor=#0D2F42;" vertex="1" parent="1">
+          <mxGeometry x="200" y="92" width="150" height="68" as="geometry"/>
+        </mxCell>
+        <mxCell id="undermind" value="Undermind&#xa;deep iterative search&#xa;for hard or niche questions (minutes per run)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EAE1D7;strokeColor=#0082B1;fontFamily=Atkinson Hyperlegible Next;fontSize=9;fontColor=#0D2F42;" vertex="1" parent="1">
+          <mxGeometry x="360" y="92" width="150" height="68" as="geometry"/>
+        </mxCell>
+        <mxCell id="rr" value="Research Rabbit&#xa;visualise citation graph around a seed paper — forward + backward" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EAE1D7;strokeColor=#0082B1;fontFamily=Atkinson Hyperlegible Next;fontSize=9;fontColor=#0D2F42;" vertex="1" parent="1">
+          <mxGeometry x="520" y="92" width="150" height="68" as="geometry"/>
+        </mxCell>
+        <mxCell id="scite" value="scite&#xa;classify citations as supporting, contrasting, or mentioning" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EAE1D7;strokeColor=#0082B1;fontFamily=Atkinson Hyperlegible Next;fontSize=9;fontColor=#0D2F42;" vertex="1" parent="1">
+          <mxGeometry x="680" y="92" width="180" height="68" as="geometry"/>
+        </mxCell>
+        <mxCell id="laneB" value="PubMed — source of truth" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FAF6F1;strokeColor=#177C55;strokeWidth=1.5;fontFamily=Atkinson Hyperlegible Next;fontSize=11;fontStyle=1;fontColor=#177C55;align=left;verticalAlign=top;spacingLeft=20;spacingTop=10;" vertex="1" parent="1">
+          <mxGeometry x="20" y="220" width="860" height="100" as="geometry"/>
+        </mxCell>
+        <mxCell id="scm" value="Single Citation Matcher&#xa;paste a half-remembered ref → PMID" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#177C55;strokeColor=none;fontFamily=Atkinson Hyperlegible Next;fontSize=9;fontColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="40" y="255" width="240" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="check" value="PMID exists? Title matches?&#xa;if not, the citation is hallucinated" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#177C55;strokeColor=none;fontFamily=Atkinson Hyperlegible Next;fontSize=9;fontColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="300" y="255" width="270" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="zot" value="Export .nbib → Zotero&#xa;only verified references enter the library" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#177C55;strokeColor=none;fontFamily=Atkinson Hyperlegible Next;fontSize=9;fontColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="590" y="255" width="270" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="rule" value="Rule of thumb: AI tools surface candidates; PubMed validates them. Never cite a paper an LLM gave you without checking the PMID." style="text;html=1;align=center;fontSize=11;fontStyle=2;fontColor=#A83732;" vertex="1" parent="1">
+          <mxGeometry x="20" y="335" width="860" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="rule2" value="LLMs (ChatGPT, Claude, Gemini) without a retrieval layer are particularly prone to inventing plausible-looking citations." style="text;html=1;align=center;fontSize=9;fontColor=#76716B;" vertex="1" parent="1">
+          <mxGeometry x="20" y="355" width="860" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="ev" style="endArrow=classic;html=1;strokeColor=#177C55;strokeWidth=2;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="undermind" target="check">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

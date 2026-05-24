@@ -1,0 +1,238 @@
+/* Pequod project page — swatches and crew grid.
+   Uses the per-swatch --c CSS variable injected via inline style. */
+
+.pequod-swatches {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 0.75rem;
+  margin: 1.5rem 0 2rem;
+}
+
+.pequod-swatches .swatch {
+  position: relative;
+  aspect-ratio: 16 / 10;
+  border-radius: 4px;
+  padding: 0.6rem 0.75rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: var(--c);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  font-family: "JetBrains Mono", "SF Mono", Menlo, monospace;
+  font-size: 0.72rem;
+  transition: transform 160ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.pequod-swatches .swatch:hover {
+  transform: translateY(-2px);
+}
+
+.pequod-swatches .swatch span {
+  font-family: "Atkinson Hyperlegible Next", system-ui, sans-serif;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.pequod-swatches .swatch code {
+  background: transparent;
+  padding: 0;
+  font-size: 0.72rem;
+  opacity: 0.85;
+  /* Inherit the swatch's text colour (cream on dark swatches, navy on
+     light ones). Without this, the site-wide `code` rule forces navy,
+     which disappears against Log 600 / 700. */
+  color: inherit;
+}
+
+/* Swatch text colour auto-contrast: light text on Log 500 and darker,
+   dark text on Log 400 and lighter. Adjust per-swatch below. */
+
+.pequod-swatches .swatch[style*="#F7F3EE"],
+.pequod-swatches .swatch[style*="#EAE1D7"],
+.pequod-swatches .swatch[style*="#DBC9B6"],
+.pequod-swatches .swatch[style*="#CFAD8E"],
+.pequod-swatches .swatch[style*="#BD8C68"],
+.pequod-swatches .swatch[style*="#A16E50"] {
+  color: #0D2F42;
+}
+
+.pequod-swatches .swatch[style*="#835A49"],
+.pequod-swatches .swatch[style*="#335260"],
+.pequod-swatches .swatch[style*="#163F54"],
+.pequod-swatches .swatch[style*="#0D2F42"],
+.pequod-swatches .swatch[style*="#0C222F"],
+.pequod-swatches .swatch[style*="#0B1720"] {
+  color: #EAE1D7;
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+/* Crew grid */
+
+.pequod-crew {
+  display: grid;
+  gap: 0.25rem;
+  margin: 1.5rem 0 2rem;
+  font-size: 0.9rem;
+}
+
+.crew-row {
+  display: grid;
+  grid-template-columns: 1fr 0.6fr 1.2fr 1.2fr 2.5fr;
+  gap: 1rem;
+  align-items: center;
+  padding: 0.75rem 0.25rem;
+  border-top: 1px solid rgba(122, 155, 158, 0.2);
+}
+
+.crew-row:last-child {
+  border-bottom: 1px solid rgba(122, 155, 158, 0.2);
+}
+
+.crew-name {
+  font-weight: 620;
+  letter-spacing: -0.01em;
+  color: #0D2F42;
+}
+
+.crew-role {
+  font-family: "JetBrains Mono", "SF Mono", Menlo, monospace;
+  font-size: 0.72rem;
+  color: #335260;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.crew-sample {
+  font-family: "JetBrains Mono", "SF Mono", Menlo, monospace;
+  font-size: 0.72rem;
+  padding: 0.35rem 0.6rem;
+  border-radius: 3px;
+  background-color: var(--c);
+  color: #EAE1D7;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  text-align: center;
+  letter-spacing: 0.01em;
+}
+
+/* Dark-mode crew variants are designed to be *light* pigments that sit
+   against Log 950. When the variant is itself the swatch background,
+   cream-on-light disappears (Stubb #FFD9BB, Pip #DEC577, Ishmael #BFBBB6,
+   Starbuck #A6DFFF, Tashtego #82C4A2 are unreadable in cream). Force a
+   dark label on every dark-mode swatch. */
+.crew-sample-dark {
+  color: #0D2F42;
+}
+
+/* Light-mode accent swatches show against Log 100 (for scale). */
+.crew-sample-light {
+  position: relative;
+}
+.crew-sample-light::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #EAE1D7;
+  z-index: -1;
+  border-radius: 3px;
+}
+
+/* Dark-mode accent swatches show against Log 950. */
+.crew-sample-dark {
+  position: relative;
+}
+.crew-sample-dark::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #0B1720;
+  z-index: -1;
+  border-radius: 3px;
+}
+
+.crew-note {
+  font-size: 0.86rem;
+  color: #335260;
+  line-height: 1.5;
+}
+
+/* Dark-theme overrides for the Pequod page itself */
+
+body.quarto-dark .crew-name      { color: #E8DDC7; }
+body.quarto-dark .crew-role      { color: #BFBBB6; }
+body.quarto-dark .crew-note      { color: #DDD4BE; }
+body.quarto-dark .crew-row       { border-top-color: rgba(122, 155, 158, 0.3); }
+body.quarto-dark .crew-row:last-child { border-bottom-color: rgba(122, 155, 158, 0.3); }
+
+/* Responsive: stack on narrow viewports */
+
+@media (max-width: 720px) {
+  .crew-row {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem 1rem;
+  }
+  .crew-note {
+    grid-column: 1 / -1;
+  }
+}
+
+/* CTA button row — sits under the cover image and links out to the
+   GitHub repo, the VS Code Marketplace listing, the Open VSX entry,
+   and the R package. Styled as quiet pill-shaped buttons in the
+   palette's own warm-taupe / softsage register; they should feel
+   like part of the page, not bolted on. */
+
+.pequod-cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1.25rem 0 2rem;
+}
+
+/* Quarto wraps inline links in a <p>; make it transparent so the flex
+   layout above sees the <a> elements as direct children. */
+.pequod-cta > p {
+  display: contents;
+}
+
+.pequod-cta a.pequod-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4em;
+  padding: 0.45em 0.95em;
+  font-size: 0.9rem;
+  font-weight: 500;
+  line-height: 1.2;
+  color: #0D2F42;
+  background: #DBC9B6;                /* Log 150 */
+  border: 1px solid #CFAD8E;          /* Log 200 */
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background 160ms ease, border-color 160ms ease, color 160ms ease;
+}
+
+.pequod-cta a.pequod-btn:hover,
+.pequod-cta a.pequod-btn:focus-visible {
+  background: #CFAD8E;                /* Log 200 */
+  border-color: #BD8C68;              /* Log 300 */
+  color: #0D2F42;
+}
+
+.pequod-cta a.pequod-btn iconify-icon,
+.pequod-cta a.pequod-btn .iconify {
+  font-size: 1.05em;
+  vertical-align: -0.1em;
+}
+
+body.quarto-dark .pequod-cta a.pequod-btn {
+  color: #EAE1D7;                     /* Log 100 */
+  background: #0D2F42;                /* Log 800 */
+  border-color: #163f54;              /* Log 700 */
+}
+
+body.quarto-dark .pequod-cta a.pequod-btn:hover,
+body.quarto-dark .pequod-cta a.pequod-btn:focus-visible {
+  background: #163f54;
+  border-color: #BD8C68;
+  color: #EAE1D7;
+}

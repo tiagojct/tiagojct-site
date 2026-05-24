@@ -1,0 +1,12 @@
+# Obsidian
+content/.obsidian/workspace.json
+content/.obsidian/plugins/
+content/.obsidian/themes/
+
+# Quartz
+public/
+.quartz-cache/
+node_modules/
+
+# OS
+.DS_Store

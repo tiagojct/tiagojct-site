@@ -1,0 +1,31 @@
+<mxfile host="app.diagrams.net" agent="Claude (initial scaffold)" version="22.0.0">
+  <diagram name="query-anatomy" id="qa1">
+    <mxGraphModel dx="900" dy="400" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="900" pageHeight="360" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="t" value="What PubMed does to your query" style="text;html=1;align=center;verticalAlign=middle;fontSize=13;fontStyle=1;fontColor=#0D2F42;" vertex="1" parent="1">
+          <mxGeometry x="280" y="8" width="340" height="24" as="geometry"/>
+        </mxCell>
+        <mxCell id="b1" value="1. You type&#xa;&#xa;asthma children&#xa;inhaled corticosteroids" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EAE1D7;strokeColor=#0082B1;strokeWidth=1.5;fontFamily=Atkinson Hyperlegible Next;fontSize=11;fontColor=#0D2F42;" vertex="1" parent="1">
+          <mxGeometry x="20" y="50" width="240" height="68" as="geometry"/>
+        </mxCell>
+        <mxCell id="b2" value="2. Automatic Term Mapping (ATM)&#xa;&#xa;PubMed expands each token against MeSH,&#xa;journals, authors, then text words.&#xa;&#xa;asthma → &quot;asthma&quot;[MeSH] OR &quot;asthma&quot;[tiab]&#xa;children → &quot;child&quot;[MeSH] OR &quot;children&quot;[tiab]&#xa;inhaled corticosteroids → &quot;adrenal cortex hormones&quot;[MeSH]&#xa;OR &quot;inhaled corticosteroids&quot;[tiab] ..." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FAF6F1;strokeColor=#6A4A00;strokeWidth=1.5;fontFamily=Atkinson Hyperlegible Next;fontSize=10;fontColor=#0D2F42;align=left;" vertex="1" parent="1">
+          <mxGeometry x="295" y="40" width="310" height="220" as="geometry"/>
+        </mxCell>
+        <mxCell id="b3" value="3. Combined with AND&#xa;&#xa;(block 1) AND&#xa;(block 2) AND&#xa;(block 3)&#xa;&#xa;→ result set" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EAE1D7;strokeColor=#177C55;strokeWidth=1.5;fontFamily=Atkinson Hyperlegible Next;fontSize=11;fontColor=#0D2F42;" vertex="1" parent="1">
+          <mxGeometry x="640" y="100" width="240" height="100" as="geometry"/>
+        </mxCell>
+        <mxCell id="sd" value="Search Details panel&#xa;Always open it (right sidebar). The translated query is the real query PubMed ran — copy it, paste in Methods, and you have a reproducible search. If results surprise you, the answer is here." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FAF6F1;strokeColor=#0082B1;fontFamily=Atkinson Hyperlegible Next;fontSize=10;fontColor=#0D2F42;align=left;" vertex="1" parent="1">
+          <mxGeometry x="20" y="280" width="860" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="e1" style="endArrow=classic;html=1;strokeColor=#835A49;strokeWidth=1.5;" edge="1" parent="1" source="b1" target="b2">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e2" style="endArrow=classic;html=1;strokeColor=#835A49;strokeWidth=1.5;" edge="1" parent="1" source="b2" target="b3">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

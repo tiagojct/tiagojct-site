@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 360" role="img" aria-label="Anatomy of a PubMed query. A raw user query 'asthma children inhaled corticosteroids' is translated by PubMed's Automatic Term Mapping into MeSH terms with text-word fallbacks, combined with Boolean AND. The Search Details panel shows the full translated query." font-family="Atkinson Hyperlegible Next, sans-serif">
+  <defs>
+    <marker id="arr2" markerWidth="7" markerHeight="7" refX="5" refY="3.5" orient="auto">
+      <polygon points="0 0, 7 3.5, 0 7" fill="#835A49"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="450" y="22" text-anchor="middle" font-size="13" font-weight="700" fill="#0D2F42">What PubMed does to your query</text>
+
+  <!-- Step 1: raw query -->
+  <rect x="20" y="50" width="240" height="68" rx="6" fill="#EAE1D7" stroke="#0082B1" stroke-width="1.5"/>
+  <text x="140" y="72" text-anchor="middle" font-size="11" font-weight="700" fill="#0D2F42">1. You type</text>
+  <text x="140" y="93" text-anchor="middle" font-size="11" fill="#0D2F42" font-family="Geist Mono, monospace">asthma children</text>
+  <text x="140" y="108" text-anchor="middle" font-size="11" fill="#0D2F42" font-family="Geist Mono, monospace">inhaled corticosteroids</text>
+
+  <line x1="260" y1="84" x2="295" y2="84" stroke="#835A49" stroke-width="1.5" marker-end="url(#arr2)"/>
+
+  <!-- Step 2: ATM box -->
+  <rect x="295" y="40" width="310" height="220" rx="6" fill="#FAF6F1" stroke="#6A4A00" stroke-width="1.5"/>
+  <text x="450" y="60" text-anchor="middle" font-size="11" font-weight="700" fill="#0D2F42">2. Automatic Term Mapping (ATM)</text>
+  <text x="450" y="76" text-anchor="middle" font-size="9.5" fill="#76716B">PubMed expands each token against</text>
+  <text x="450" y="89" text-anchor="middle" font-size="9.5" fill="#76716B">MeSH, journals, authors, then text words</text>
+
+  <!-- block: asthma -->
+  <rect x="310" y="100" width="280" height="44" rx="4" fill="#EAE1D7" stroke="#A16E50" stroke-width="1"/>
+  <text x="450" y="116" text-anchor="middle" font-size="10" font-weight="700" fill="#0D2F42">asthma</text>
+  <text x="450" y="132" text-anchor="middle" font-size="9" font-family="Geist Mono, monospace" fill="#835A49">"asthma"[MeSH] OR "asthma"[tiab]</text>
+
+  <!-- block: children -->
+  <rect x="310" y="150" width="280" height="44" rx="4" fill="#EAE1D7" stroke="#A16E50" stroke-width="1"/>
+  <text x="450" y="166" text-anchor="middle" font-size="10" font-weight="700" fill="#0D2F42">children</text>
+  <text x="450" y="182" text-anchor="middle" font-size="9" font-family="Geist Mono, monospace" fill="#835A49">"child"[MeSH] OR "children"[tiab]</text>
+
+  <!-- block: ICS -->
+  <rect x="310" y="200" width="280" height="50" rx="4" fill="#EAE1D7" stroke="#A16E50" stroke-width="1"/>
+  <text x="450" y="216" text-anchor="middle" font-size="10" font-weight="700" fill="#0D2F42">inhaled corticosteroids</text>
+  <text x="450" y="232" text-anchor="middle" font-size="9" font-family="Geist Mono, monospace" fill="#835A49">"adrenal cortex hormones"[MeSH]</text>
+  <text x="450" y="244" text-anchor="middle" font-size="9" font-family="Geist Mono, monospace" fill="#835A49">OR "inhaled corticosteroids"[tiab] ...</text>
+
+  <line x1="605" y1="150" x2="640" y2="150" stroke="#835A49" stroke-width="1.5" marker-end="url(#arr2)"/>
+
+  <!-- Step 3: combine -->
+  <rect x="640" y="100" width="240" height="100" rx="6" fill="#EAE1D7" stroke="#177C55" stroke-width="1.5"/>
+  <text x="760" y="122" text-anchor="middle" font-size="11" font-weight="700" fill="#0D2F42">3. Combined with AND</text>
+  <text x="760" y="142" text-anchor="middle" font-size="10" fill="#76716B">(block 1) AND</text>
+  <text x="760" y="158" text-anchor="middle" font-size="10" fill="#76716B">(block 2) AND</text>
+  <text x="760" y="174" text-anchor="middle" font-size="10" fill="#76716B">(block 3)</text>
+  <text x="760" y="192" text-anchor="middle" font-size="9.5" fill="#177C55">→ result set</text>
+
+  <!-- Search Details callout -->
+  <rect x="20" y="280" width="860" height="60" rx="6" fill="#FAF6F1" stroke="#0082B1" stroke-width="1"/>
+  <text x="40" y="302" font-size="11" font-weight="700" fill="#0D2F42">Search Details panel</text>
+  <text x="40" y="320" font-size="10" fill="#0D2F42">Always open it (right sidebar). The translated query is the real query PubMed ran — copy it,</text>
+  <text x="40" y="334" font-size="10" fill="#0D2F42">paste in Methods, and you have a reproducible search. If results surprise you, the answer is here.</text>
+</svg>
