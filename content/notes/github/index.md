@@ -562,4 +562,4 @@ For the situations that come up later in a project (interrupted work, regression
 
 If you work in R, the [RStudio best-practices post](/notes/rst-bp/) covers the project-level conventions that pair naturally with a Git-tracked repository. Once a project is in a repo, [OpenCode](/notes/opencode/) can read, analyse, and modify it directly from the terminal.
 
-If you have any comments or questions, feel free to [reach out](mailto:tiagojacinto@med.up.pt).
+If you have any comments or questions, feel free to [reach out](mailto:tiagojacinto@med.up.pt)).

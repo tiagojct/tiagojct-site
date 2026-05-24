@@ -17,7 +17,7 @@ tags:
 draft: false
 ---
 
-![The dark variant: deep-ink ground with crew-dark accents.](dark.png)
+![The dark variant: deep-ink ground with crew-dark accents.](projects/pequod-quarto/dark.png))
 
 `pequod-quarto` is a Quarto extension that brings the [Pequod palette](/projects/pequod/) into Quarto presentations and documents. It ships three formats: `pequod-revealjs` for slides on warm paper, `pequod-dark-revealjs` for slides on deep ink, and `pequod-html` for documents, reports, and articles. Atkinson Hyperlegible Next and Atkinson Hyperlegible Mono are bundled as base64-embedded WOFF2, so the theme has no Google Fonts CDN dependency.
 
@@ -42,7 +42,7 @@ The palette itself, the Log scale, and the per-crew syntax assignments are docum
 
 Every Pandoc syntax token maps to a member of the crew: Ahab keywords (red), Tashtego strings (green), Pip numbers (yellow), Ishmael comments (grey), Starbuck functions (blue), Queequeg types (indigo), Stubb constants (orange), Daggoo variables (brown). The mapping is honoured by both the slide deck and the HTML document, so a code chunk in a report looks the same as a code chunk in a presentation.
 
-![A code slide rendered with the light `pequod-revealjs` format.](cover.png)
+![A code slide rendered with the light `pequod-revealjs` format.](projects/pequod-quarto/cover.png))
 
 ## Install
 

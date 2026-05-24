@@ -251,4 +251,4 @@ If the output looks correct on a test document with two or three references, it 
 
 The entire workflow is portable. The `.md` file, the `.bib` file, and the `.csl` file are plain text. They open on any machine with any editor, and they can be put under version control with Git, so you have a complete history of every change to your manuscript, your references, and your citations.
 
-If you have any comments or questions, feel free to [reach out](mailto:tiagojacinto@med.up.pt).
+If you have any comments or questions, feel free to [reach out](mailto:tiagojacinto@med.up.pt)).

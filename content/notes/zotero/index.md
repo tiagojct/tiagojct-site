@@ -30,7 +30,7 @@ Zotero is free and open-source. Storage for syncing PDFs across devices is the o
 
 Download the installer from [zotero.org](https://www.zotero.org/download). Zotero runs on macOS, Windows, and Linux. Install it as you would any other application in your operating system.
 
-![Zotero's website. Click the big red button and don't look back.](zotero-download.png)
+![Zotero's website. Click the big red button and don't look back.](notes/zotero/zotero-download.png))
 
 The second thing to install is the **Zotero Connector**: a browser extension available for Firefox, Chrome, Edge, and Safari. This is what allows you to import references directly from journal websites, PubMed, Google Scholar, and DOI landing pages without any copy-pasting. The download page for the connector is on the same page as the main application.
 
@@ -43,15 +43,15 @@ Once both are installed, open Zotero. You will be prompted to create a free acco
 
 Zotero's main window is divided into three panes.
 
-![Zotero main window after first installation, showing the collections panel on the left, the items list in the middle, and the item detail panel on the right](zotero-main-window.png)
+![Zotero main window after first installation, showing the collections panel on the left, the items list in the middle, and the item detail panel on the right](notes/zotero/zotero-main-window.png))
 
 **Left pane: the collections panel.** This is a tree of folders you create to organise your library. At the top is "My Library", which contains everything. Below it you create collections, one per project or one per topic, whatever works for you. There are also a few special items: "My Publications" for papers you have authored, "Duplicate Items" for finding duplicate references, "Unfiled Items" for references not assigned to any collection, and "Trash".
 
-![The left pane.](zotero-left-pane.png)
+![The left pane.](notes/zotero/zotero-left-pane.png))
 
 **Middle pane: the items list.** When you select a collection on the left, the items it contains appear here. Each row shows the title, author, year, and item type (what is shown about the item is configurable by right-clicking on the top bar). You can sort by any column.
 
-![A paperclip icon on the left of a row means the item has an attachment, usually a PDF.](zotero-single-ref.png)
+![A paperclip icon on the left of a row means the item has an attachment, usually a PDF.](notes/zotero/zotero-single-ref.png))
 
 **Right pane: the item detail panel.** When you select an item in the middle pane, its metadata appears here: title, authors, journal, year, volume, pages, DOI, abstract, and more. Below the metadata are tabs for **Notes**, **Tags**, and **Related** items. This is also where you see and open attached PDFs.
 
@@ -59,7 +59,7 @@ Collections in Zotero are **virtual folders**, not physical ones. An item can be
 
 The toolbar at the top of the window contains a few frequently used buttons: a green circle with a plus (new item), a magic wand (add item by identifier), a folder with a plus (new collection), and a search bar. The Zotero Connector button lives in your browser, not in the Zotero application itself.
 
-![The toolbar](zotero-toolbar.png)
+![The toolbar](notes/zotero/zotero-toolbar.png))
 
 ## 3. Adding references
 
@@ -67,7 +67,7 @@ The toolbar at the top of the window contains a few frequently used buttons: a g
 
 This is the fastest and most reliable way to add references. When you are on a journal article page, a PubMed record, a Google Scholar result, or a DOI landing page, click the Zotero Connector icon in your browser toolbar.
 
-![If the page contains a single article, the icon looks like a document.](zotero-save-pubmed.png)
+![If the page contains a single article, the icon looks like a document.](notes/zotero/zotero-save-pubmed.png))
 
 The connector works best on publisher websites (Elsevier, Springer, Wiley, BMJ, NEJM) and PubMed. On Google Scholar it works, but metadata quality varies. When possible, import from the primary source (the publisher's page or PubMed) rather than from Google Scholar.
 
@@ -81,7 +81,7 @@ In the Zotero toolbar, click the magic wand icon. A small input box appears. Pas
 
 This is the fastest path when you already have a list of identifiers, for example a table of studies from a previous systematic review, or a list of PMIDs from a PubMed search export. You can paste multiple identifiers separated by spaces or newlines and Zotero will import them all.
 
-![One of the easiest ways to add an item to Zotero.](zotero-magicwand.png)
+![One of the easiest ways to add an item to Zotero.](notes/zotero/zotero-magicwand.png))
 
 ### Drag and drop PDFs
 
@@ -156,7 +156,7 @@ Tags are case-sensitive. "To read" and "to read" are different tags. Decide on a
 
 ### Coloured tags
 
-![In this example, there are four tags: `tag1` and `tag3` are selected, and thus, only items with those tags are shown in the main window. You can also add colors to tags, like `tag1`, to create a visual distinction between tags.](zotero-tags.png)
+![In this example, there are four tags: `tag1` and `tag3` are selected, and thus, only items with those tags are shown in the main window. You can also add colors to tags, like `tag1`, to create a visual distinction between tags.](notes/zotero/zotero-tags.png))
 
 Right-click any tag in the tag selector and choose "Assign Colour". You can assign one of nine colours and a **position number from 1 to 9**. Once a tag has a position, pressing that number on the keyboard while an item is selected in the items list toggles the tag on or off immediately, without going to the Tags tab. Coloured tags also appear as small coloured dots in the items list, so you can see tagged items at a glance.
 
@@ -168,7 +168,7 @@ When you import references from PubMed or other databases, Zotero imports their 
 
 To hide them, right-click the tag selector and uncheck "Show Automatic". Auto-imported tags are still there (they still appear in the item's Tags tab, and you can search for them in the advanced search), but they are no longer cluttering the tag selector. I always turn this off and never turn it back on.
 
-![Go to `Settings` and scroll down to `Miscellaneous`.](zotero-tags-prefs.png)
+![Go to `Settings` and scroll down to `Miscellaneous`.](notes/zotero/zotero-tags-prefs.png))
 
 ## 6. Notes
 
@@ -180,7 +180,7 @@ An **item note** is attached to a specific reference. Select an item, go to the 
 
 A **standalone note** is not attached to any reference. Create one with `File > New Note > New Standalone Note`, or by right-clicking a collection and choosing "New Standalone Note". Standalone notes are useful for summaries of a topic, reading logs, or meeting notes that reference multiple papers without belonging to any one of them.
 
-![Use and abuse notes!](zotero-note.png)
+![Use and abuse notes!](notes/zotero/zotero-note.png))
 
 ### What to write in notes
 
@@ -221,13 +221,13 @@ The PDF reader has five annotation tools in the toolbar:
 
 All annotations are stored in Zotero, not written into the PDF file itself. This means they sync with the rest of your library and are not lost if you replace the PDF.
 
-![PDF annotations can be very helpful.](zotero-pdf-annotation.png)
+![PDF annotations can be very helpful.](notes/zotero/zotero-pdf-annotation.png))
 
 ### Extracting annotations to a note
 
 After annotating a PDF, right-click the item in the items list and choose "Add Note from Annotations". Zotero creates an item note containing all your highlights and comments, formatted as a structured list with the highlighted text and the page number. This note is searchable and editable; you can add your own commentary between the extracted highlights.
 
-![Extracting annotations to a note is particularly useful before writing. Instead of re-reading a PDF to find the passages you marked, you open the extracted note and read a condensed version of the paper's most relevant content.](zotero-pdf-annotation-note.png)
+![Extracting annotations to a note is particularly useful before writing. Instead of re-reading a PDF to find the passages you marked, you open the extracted note and read a condensed version of the paper's most relevant content.](notes/zotero/zotero-pdf-annotation-note.png))
 
 ## 8. Organising attachments and storage
 
@@ -259,7 +259,7 @@ The search bar in the toolbar filters the items list as you type. By default it 
 
 ### Advanced search
 
-![The Advanced search is powerful, and you can even save a search into a dynamic collection.](zotero-advanced-search.png)
+![The Advanced search is powerful, and you can even save a search into a dynamic collection.](notes/zotero/zotero-advanced-search.png))
 
 `Edit > Advanced Search` (or `Ctrl/Cmd + Shift + F`) opens a dialog where you can build multi-condition queries: author contains "Smith" AND year is after 2020 AND tag is "include". The results appear as a temporary collection. Click "Save Search" to keep it as a **saved search**: a dynamic collection that always shows items matching the criteria, updated automatically as your library changes.
 
@@ -324,4 +324,4 @@ Everything in Zotero (your library data, notes, and tags) is stored in an open f
 - [Using Zettlr](/notes/zettlr/): the Markdown editor on the other end of that pipeline.
 - [Scientific writing for early-career researchers](/notes/sw/): how references fit into the wider writing process, reporting guidelines, and the editorial process.
 
-If you have any comments or questions, feel free to [reach out](mailto:tiagojacinto@med.up.pt).
+If you have any comments or questions, feel free to [reach out](mailto:tiagojacinto@med.up.pt)).

@@ -304,4 +304,4 @@ If you want to adapt this pattern to another text, the next step is not rewritin
 - [OpenCode: an AI research assistant in your terminal](/notes/opencode/): the agent side of the same local-first stance; the Ollama section there is the same one used here as the answer model.
 - [Implementing AI in health: some things I want to preserve](/essays/ai-health/): the philosophical frame for preferring legible, local AI in clinical and research settings.
 
-If you have any comments or questions, feel free to [reach out](mailto:tiagojacinto@med.up.pt).
+If you have any comments or questions, feel free to [reach out](mailto:tiagojacinto@med.up.pt)).

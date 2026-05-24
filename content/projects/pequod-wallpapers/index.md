@@ -22,7 +22,7 @@ draft: false
 [ Source on GitHub](https://github.com/tiagojct/pequod-wallpapers) ·
 [ Generated images CC BY 4.0](https://github.com/tiagojct/pequod-wallpapers/blob/main/LICENSE-IMAGES)
 
-![The application running in light theme, abstract mode, showing a *constellation* composition: a dark biomorphic blob with a small red-brown inner disc, a thin sinuous curve crossing the canvas, and scattered asterisk and wedge marks on a warm Log 100 surface.](screenshot.png)
+![The application running in light theme, abstract mode, showing a *constellation* composition: a dark biomorphic blob with a small red-brown inner disc, a thin sinuous curve crossing the canvas, and scattered asterisk and wedge marks on a warm Log 100 surface.](projects/pequod-wallpapers/screenshot.png))
 
 > [!note]
 ## Status
@@ -100,7 +100,7 @@ Three rules constrain every composition so the output stays coherent across rege
 
 1. **Same temperature side.** The surface and the foreground Log steps come from the same side of the Pequod scale (warm Log 50 to 500 on light theme, cool Log 600 to 950 on dark theme). The bands never mix sides.
 2. **Variant by theme.** Light-mode accent variants pair with light surfaces; dark-mode accent variants pair with dark surfaces. Never crossed in one composition.
-3. **CVD floor.** The two accents that collapse most under deuteranopia (Ishmael and Tashtego, ΔE 6.8 in the Pequod accessibility table) are not used as the only two accents in any single composition. See the [Pequod accessibility section](/projects/pequod/#colourblindness) for the full pairwise distance matrix and the underlying CVD simulation.
+3. **CVD floor.** The two accents that collapse most under deuteranopia (Ishmael and Tashtego, ΔE 6.8 in the Pequod accessibility table) are not used as the only two accents in any single composition. See the [Pequod accessibility section](/projects/pequod/) for the full pairwise distance matrix and the underlying CVD simulation.
 
 ## Try it
 
@@ -122,4 +122,4 @@ The [source is on GitHub](https://github.com/tiagojct/pequod-wallpapers) under M
 
 ---
 
-If you generate a wallpaper you like and want me to know, the share URL captures everything: send it to [tiagojacinto@med.up.pt](mailto:tiagojacinto@med.up.pt). Suggestions on the composition engine itself are also welcome: the source is small enough to read in an afternoon.
+If you generate a wallpaper you like and want me to know, the share URL captures everything: send it to [tiagojacinto@med.up.pt](mailto:tiagojacinto@med.up.pt)). Suggestions on the composition engine itself are also welcome: the source is small enough to read in an afternoon.

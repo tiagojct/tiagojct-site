@@ -59,7 +59,7 @@ Most scientific articles follow the IMRAD format: Introduction, Methods, Results
 
 ### The hourglass model
 
-![The hourglass arc of a scientific article. The introduction opens broadly and narrows to the objective; methods and results form the narrow waist; the discussion opens back out from the specific finding to its wider implications.](figures/hourglass.svg){width=320 fig-align="center"}
+![The hourglass arc of a scientific article. The introduction opens broadly and narrows to the objective; methods and results form the narrow waist; the discussion opens back out from the specific finding to its wider implications.](notes/sw/figures/hourglass.svg){width=320 fig-align="center"}
 
 A useful way to think about an article's narrative arc is the hourglass. The introduction starts broad (the general problem), narrows to the specific research question, and states the objective. The methods and results stay narrow and specific. The discussion then broadens again, from interpretation of the specific findings to their wider implications. The abstract compresses this entire arc into a single paragraph.
 
@@ -361,9 +361,9 @@ A worked example of why the format choice matters. The same finding (*"participa
 
 ::: {#fig-overkill layout-ncol=2}
 
-![A pie chart of a single proportion: two slices, one short sentence of information, several seconds of reader effort to estimate the angle.](figures/05-pie-overkill.png){#fig-pie-overkill}
+![A pie chart of a single proportion: two slices, one short sentence of information, several seconds of reader effort to estimate the angle.](notes/sw/figures/05-pie-overkill.png){#fig-pie-overkill}
 
-![A bar chart of the same proportion: two bars, the y-axis carries no extra meaning, and the reader still has to read the number off the label.](figures/06-bar-overkill.png){#fig-bar-overkill}
+![A bar chart of the same proportion: two bars, the y-axis carries no extra meaning, and the reader still has to read the number off the label.](notes/sw/figures/06-bar-overkill.png){#fig-bar-overkill}
 
 Both charts occupy valuable space to communicate a single number. The sentence *"Participants were mostly female, 3,300 (83%)"* conveys the same information in less space, with no risk of misreading.
 
@@ -428,13 +428,13 @@ The same fictional heart failure data, plotted four different ways, shows each f
 
 ::: {#fig-wilke layout-ncol=2}
 
-![**Ugly.** Harsh red/green defaults, lowercase axis labels, no units. Accurate, but unpublishable.](figures/01-ugly.png){#fig-ugly}
+![**Ugly.** Harsh red/green defaults, lowercase axis labels, no units. Accurate, but unpublishable.](notes/sw/figures/01-ugly.png){#fig-ugly}
 
-![**Bad.** Bar chart with SD error bars on a right-skewed biomarker. The distribution is log-normal; the bars imply a symmetric sampling distribution that does not exist here.](figures/02-bad-bar.png){#fig-bad-bar}
+![**Bad.** Bar chart with SD error bars on a right-skewed biomarker. The distribution is log-normal; the bars imply a symmetric sampling distribution that does not exist here.](notes/sw/figures/02-bad-bar.png){#fig-bad-bar}
 
-![**Bad.** A truncated y-axis turns a ~15% true difference (1,000 vs 1,150 pg/mL, clinically modest) into what looks like a 4-fold effect. The same numbers on a zero-anchored axis would look unremarkable.](figures/03-bad-truncated.png){#fig-bad-trunc}
+![**Bad.** A truncated y-axis turns a ~15% true difference (1,000 vs 1,150 pg/mL, clinically modest) into what looks like a 4-fold effect. The same numbers on a zero-anchored axis would look unremarkable.](notes/sw/figures/03-bad-truncated.png){#fig-bad-trunc}
 
-![**Good.** Boxplot with jittered raw data, log-scaled y-axis (appropriate for a right-skewed biomarker), accessible two-colour palette, and a caption that makes the figure self-contained.](figures/04-good.png){#fig-good}
+![**Good.** Boxplot with jittered raw data, log-scaled y-axis (appropriate for a right-skewed biomarker), accessible two-colour palette, and a caption that makes the figure self-contained.](notes/sw/figures/04-good.png){#fig-good}
 
 NT-proBNP at discharge by 30-day readmission status (simulated). Panels A, B, and D share the same cohort (n = 200 per group); panel C uses a separate, deliberately modest scenario to isolate the truncation effect. Source code: [`figures.R`](figures.R).
 
@@ -454,7 +454,7 @@ Figures for **posters** and **oral presentations** follow different conventions:
 
 ## The editorial process
 
-![From manuscript to publication. Editorial screening filters submissions in 1--5 days; external peer review takes 4--12 weeks; the decision routes to publication, revisions, or, on reject-and-resubmit, onto a new journal.](figures/editorial-process.svg){fig-align="center"}
+![From manuscript to publication. Editorial screening filters submissions in 1--5 days; external peer review takes 4--12 weeks; the decision routes to publication, revisions, or, on reject-and-resubmit, onto a new journal.](notes/sw/figures/editorial-process.svg){fig-align="center"}
 
 ### Choosing a journal
 

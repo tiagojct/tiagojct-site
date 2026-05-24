@@ -23,7 +23,7 @@ draft: false
 This page brings together the core references I use for the subject Evaluation in Medical Informatics (FMUP, 2025/2026). It is designed as a practical reading map: each section includes key papers or standards and a short note on why they matter for study design, reporting, and implementation.
 You can use this as a starting point for your own projects, or as a reference for teachers and students. The list is not exhaustive but focuses on foundational and recent influential works that I find useful in my research and teaching.
 
-You can [download the full bibliography](refs-emhi.bib) for use in your own reference manager, or browse the references directly in the text. If you have suggestions for additional resources or comments on the included ones, please [contact me](mailto:tiagojacinto@med.up.pt).
+You can [download the full bibliography](notes/emhi/refs-emhi.bib)) for use in your own reference manager, or browse the references directly in the text. If you have suggestions for additional resources or comments on the included ones, please [contact me](mailto:tiagojacinto@med.up.pt)).
 
 ## 1. Foundations of evaluation in medical informatics
 
@@ -109,4 +109,4 @@ If you are using this list for teaching or project setup, start with sections 1,
 - [Implementing AI in health: some things I want to preserve](/essays/ai-health/): the philosophical framing that sits behind this reading list.
 - [Scientific writing for early-career researchers](/notes/sw/): overlaps substantially with Section 5 (reporting guidelines) and extends into data presentation and the editorial process.
 
-If you have any comments or questions, feel free to [reach out](mailto:tiagojacinto@med.up.pt).
+If you have any comments or questions, feel free to [reach out](mailto:tiagojacinto@med.up.pt)).

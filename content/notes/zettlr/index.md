@@ -50,7 +50,7 @@ Zettlr's window has three main areas.
 - **References**: citations, when a `.bib` file is configured (see [Zettlr and Zotero](/notes/zettlr-zotero/))
 - **Attachments**: files linked from the current note
 
-![Zettlr's main window, from a fresh install](zettlr-mainwindow.png)
+![Zettlr's main window, from a fresh install](notes/zettlr/zettlr-mainwindow.png))
 
 The toolbar at the top provides quick access to new file, new directory, search, export, and preferences. The search bar filters files by name as you type.
 
@@ -77,7 +77,7 @@ Some common patterns:
 
 Zettlr adds helpful editing conveniences: matching brackets and quotes are inserted automatically, list items continue when you press Enter, and tables can be edited in a grid mode.
 
-![A new file.](zettlr-mainwindow-withtext.png)
+![A new file.](notes/zettlr/zettlr-mainwindow-withtext.png))
 
 In the screenshot, you can see the Markdown syntax in the editor, and rendered as formatted text. If you want to hide the Markdown syntax and see only the formatted output, toggle `Preferences > Editor > Markdown Rendering` to `Preview mode`.
 
@@ -127,7 +127,7 @@ Zettlr is built around the Zettelkasten approach to note-taking: atomic notes, u
 
 Whether you use IDs or descriptive filenames is a personal choice. Both work with Zettlr's linking system.
 
-![Three notes in the same window. **Note 1** has a timestamp-based filename, **Note 2** gets the first Heading 1 of the file and **Note 3** gets the title set in the YAML frontmatter.](zettlr-opened-notes.png)
+![Three notes in the same window. **Note 1** has a timestamp-based filename, **Note 2** gets the first Heading 1 of the file and **Note 3** gets the title set in the YAML frontmatter.](notes/zettlr/zettlr-opened-notes.png))
 
 ## 6. Linking between notes
 
@@ -146,7 +146,7 @@ The **Related files** tab in the right sidebar shows every note in your workspac
 
 **Tags** are a second way to group notes. Add `#tagname` anywhere in the body text of a note. The tag appears in the sidebar cloud; clicking it filters the file list to all notes containing that tag. Tags and folders work together: tags describe properties of notes, folders describe where they live.
 
-![In this example, I have opened **Note 2**. Check the sidebar where you can see multiple relationships between the other notes: **Note 2** links to **Note 3**, **Note 1** is linking back to **Note 2**, and **Note 2** is linked to and from **Note 4**.](zettlr-notes-related-files.png)
+![In this example, I have opened **Note 2**. Check the sidebar where you can see multiple relationships between the other notes: **Note 2** links to **Note 3**, **Note 1** is linking back to **Note 2**, and **Note 2** is linked to and from **Note 4**.](notes/zettlr/zettlr-notes-related-files.png))
 
 ## 7. Searching
 
@@ -217,4 +217,4 @@ Zettlr files are plain text. Nothing you write is trapped in a proprietary forma
 
 For the complete academic writing workflow with citations, see [Zettlr and Zotero: a plain-text workflow for scientific writing](/notes/zettlr-zotero/).
 
-If you have any comments or questions, feel free to [reach out](mailto:tiagojacinto@med.up.pt).
+If you have any comments or questions, feel free to [reach out](mailto:tiagojacinto@med.up.pt)).

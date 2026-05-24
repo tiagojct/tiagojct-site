@@ -37,7 +37,7 @@ I welcome invitations for keynotes and workshops on AI in health, health data li
 
 ## Music
 
-I track my listening on [Last.fm](https://www.last.fm/user/tiagojct) and built [Soundings](/projects/soundings/) to turn the data into something readable. The [live dashboard](/soundings/) updates daily and the name is a Moby-Dick reference.
+I track my listening on [Last.fm](https://www.last.fm/user/tiagojct) and built [Soundings](/projects/soundings/) to turn the data into something readable. The [live dashboard](https://tiagojct.eu/soundings/) updates daily and the name is a Moby-Dick reference.
 
 The data tells a consistent story. Converge dominates — nearly one in five plays since January — with Iron Maiden, Neurosis, Ghost, and Deafheaven filling the rest of the top ten. The heavy end of the spectrum, with two Portuguese bands (Moonspell and Gaerea) in the top ten. The listening peaks between 22:00 and midnight, which matches what the rest of this page says about being a night owl by design. 360 unique artists, 1,913 unique tracks, a 66-day streak still running as of this writing.
 

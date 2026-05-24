@@ -19,7 +19,7 @@ tags:
 draft: false
 ---
 
-![Pequod](cover.jpg)
+![Pequod](projects/pequod/cover.jpg))
 
 [ GitHub](https://github.com/tiagojct/pequod){.pequod-btn}
 [ VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=tiagojct.pequod-color-theme){.pequod-btn}
@@ -152,11 +152,11 @@ The accent hues are not yet wired in as syntax colours on this site (that will c
 
 The Python package ships with `pequod.register_cmaps()`, which makes the Log scale and the crew accents addressable as ordinary matplotlib colormaps (`pequod_log`, `pequod_crew`, etc.). Combined with a small `_theme()` helper that paints the figure surface from `pequod.LOG`, you get a coherent look across plot types in about 10 lines of code.
 
-![Log scale as a continuous colormap on Log 950](example-heatmap.png)
+![Log scale as a continuous colormap on Log 950](projects/pequod/example-heatmap.png))
 
-![Grouped bars in the crew dark variants](example-bars.png)
+![Grouped bars in the crew dark variants](projects/pequod/example-bars.png))
 
-![Horizontal bars on Log 50 paper, ranked descending](example-hbars.png)
+![Horizontal bars on Log 50 paper, ranked descending](projects/pequod/example-hbars.png))
 
 A full gallery (eight plots on dark and light surfaces, including box plots, scatter, distributions, and a specimen-style swatch grid) lives at [github.com/tiagojct/pequod/tree/main/examples](https://github.com/tiagojct/pequod/tree/main/examples), with the [reproducible source](https://github.com/tiagojct/pequod/blob/main/examples/plots.py) under 350 lines of matplotlib. Titles set in Atkinson Hyperlegible Next SemiBold, ticks in JetBrains Mono.
 
@@ -218,12 +218,12 @@ The simulation script and the full pairwise ΔE matrix live in the [GitHub repos
 
 ## Download
 
-- [`Pequod.itermcolors`](Pequod.itermcolors): iTerm2 colour scheme (dark). Right-click and *Save link as…*, then in iTerm2 open *Settings > Profiles > Colors > Color Presets > Import…* and select the file. Apply the *Pequod* preset.
+- [`Pequod.itermcolors`](projects/pequod/Pequod.itermcolors)): iTerm2 colour scheme (dark). Right-click and *Save link as…*, then in iTerm2 open *Settings > Profiles > Colors > Color Presets > Import…* and select the file. Apply the *Pequod* preset.
 - **VS Code extension**: search *Pequod* on the [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=tiagojct.pequod-color-theme), or grab the `.vsix` from the [GitHub releases page](https://github.com/tiagojct/pequod/releases). Includes both **dark** and **light** themes.
-- [`Pequod-color-theme.json`](Pequod-color-theme.json): raw VS Code dark theme (for building the extension yourself).
-- [`Pequod-light-color-theme.json`](Pequod-light-color-theme.json): raw VS Code light theme.
-- [`Pequod.zed.json`](Pequod.zed.json): Zed theme family with both **dark** and **light** variants in a single file. Drop it into `~/.config/zed/themes/` (see note below).
-- [`pequod.json`](pequod.json): the canonical palette tokens (base scale, accents, role mappings, syntax assignments).
+- [`Pequod-color-theme.json`](projects/pequod/Pequod-color-theme.json)): raw VS Code dark theme (for building the extension yourself).
+- [`Pequod-light-color-theme.json`](projects/pequod/Pequod-light-color-theme.json)): raw VS Code light theme.
+- [`Pequod.zed.json`](projects/pequod/Pequod.zed.json)): Zed theme family with both **dark** and **light** variants in a single file. Drop it into `~/.config/zed/themes/` (see note below).
+- [`pequod.json`](projects/pequod/pequod.json)): the canonical palette tokens (base scale, accents, role mappings, syntax assignments).
 - **R package**: on [CRAN](https://CRAN.R-project.org/package=pequod), `install.packages("pequod")`. See install note below.
 - [Printable specimen PDF](https://github.com/tiagojct/pequod/blob/main/specimen/specimen.pdf): one-page A4 reference. Source at [`specimen/specimen.typ`](https://github.com/tiagojct/pequod/blob/main/specimen/specimen.typ).
 
@@ -277,10 +277,10 @@ Six named palettes ship: `log`, `log-warm`, `log-cool`, `crew`, `crew-dark`, `sy
 What exists today
   ~ this website (you are reading Pequod rendered in itself)
   ~ [github.com/tiagojct/pequod](https://github.com/tiagojct/pequod): the canonical repository, with `pequod.json` as the single source of truth
-  ~ [`pequod.json`](pequod.json): machine-readable tokens
-  ~ [`Pequod.itermcolors`](Pequod.itermcolors): iTerm2 colour scheme (dark)
-  ~ [`Pequod-color-theme.json`](Pequod-color-theme.json) + [`Pequod-light-color-theme.json`](Pequod-light-color-theme.json): VS Code dark and light themes
-  ~ [`Pequod.zed.json`](Pequod.zed.json): Zed theme family (dark + light)
+  ~ [`pequod.json`](projects/pequod/pequod.json)): machine-readable tokens
+  ~ [`Pequod.itermcolors`](projects/pequod/Pequod.itermcolors)): iTerm2 colour scheme (dark)
+  ~ [`Pequod-color-theme.json`](projects/pequod/Pequod-color-theme.json)) + [`Pequod-light-color-theme.json`](projects/pequod/Pequod-light-color-theme.json)): VS Code dark and light themes
+  ~ [`Pequod.zed.json`](projects/pequod/Pequod.zed.json)): Zed theme family (dark + light)
   ~ [VS Code Marketplace extension](https://marketplace.visualstudio.com/items?itemName=tiagojct.pequod-color-theme): both themes packaged for one-click install (also on [Open VSX](https://open-vsx.org/extension/tiagojct/pequod-color-theme))
   ~ [Terminal presets](https://github.com/tiagojct/pequod/tree/main/themes/terminals): Ghostty, Alacritty, kitty, WezTerm, tmux, Windows Terminal (all share the same ANSI mapping as the iTerm2 preset)
   ~ [Python package](https://pypi.org/project/pequod/): `pip install pequod`, with optional matplotlib glue under `pequod[plot]`
@@ -312,4 +312,4 @@ Licence files live alongside the tokens at [github.com/tiagojct/pequod](https://
 
 ---
 
-If you use Pequod in a project, I would love to hear about it: [tiagojacinto@med.up.pt](mailto:tiagojacinto@med.up.pt). Corrections, suggested accents, or observations about how the palette holds up against your actual reading and coding are especially welcome.
+If you use Pequod in a project, I would love to hear about it: [tiagojacinto@med.up.pt](mailto:tiagojacinto@med.up.pt)). Corrections, suggested accents, or observations about how the palette holds up against your actual reading and coding are especially welcome.

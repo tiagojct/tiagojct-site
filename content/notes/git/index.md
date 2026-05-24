@@ -729,4 +729,4 @@ Start every new project with `git init` and a `.gitignore`. The cost is thirty s
 
 The next step is putting this history online: for backup, for collaboration, and for accessing real public health datasets. The [next post](/notes/github/) covers GitHub.
 
-If you have any comments or questions, feel free to [reach out](mailto:tiagojacinto@med.up.pt).
+If you have any comments or questions, feel free to [reach out](mailto:tiagojacinto@med.up.pt)).

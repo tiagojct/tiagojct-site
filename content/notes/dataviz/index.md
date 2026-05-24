@@ -80,7 +80,7 @@ Every example below uses the same simulated dataset: 600 adults with treated hyp
 | `controlled_6m`      | logical     | `sbp_6m < 140 & dbp_6m < 90`                   |
 | `bp_class_6m`        | factor      | Normal / Pre-HT / Stage 1 / Stage 2            |
 
-The full generator is committed alongside this note as [`_generate.R`](_generate.R). It produces the figures shown below and exports the dataset to [`figures/cohort.csv`](figures/cohort.csv) so the Python tabs are reproducible from the same data.
+The full generator is committed alongside this note as [`_generate.R`](_generate.R). It produces the figures shown below and exports the dataset to [`figures/cohort.csv`](notes/dataviz/figures/cohort.csv) so the Python tabs are reproducible from the same data.
 
 > [!note]
 ## How the cohort is built (R)
@@ -120,7 +120,7 @@ Before diagnosing what can go wrong, it helps to be clear on the toolkit. Six ch
 
 A histogram bins a single continuous variable into ranges and draws the count (or density) of observations per bin. The bin width is the only knob, and it changes the chart's character: too narrow, and the histogram becomes noisy; too wide, and meaningful structure (bimodality, a clipped lower limit) gets erased. Pair the histogram with a kernel density estimate, as in @fig-type-histogram, to keep both the discrete and the smoothed silhouette visible. Use it for any continuous variable in your cohort: age, BMI, lab values, biomarkers. Watch for clipped distributions (an assay's lower limit of detection appearing as a spike) and right-skew (HbA1c, NT-proBNP, CRP), where a log-x axis is often more honest.
 
-![Histogram with overlaid kernel density of SBP at baseline. Bin width 5 mmHg.](figures/type-01-histogram.png){#fig-type-histogram}
+![Histogram with overlaid kernel density of SBP at baseline. Bin width 5 mmHg.](notes/dataviz/figures/type-01-histogram.png){#fig-type-histogram}
 
 > [!note]
 ## Code
@@ -161,7 +161,7 @@ sns.despine(); fig.tight_layout()
 
 A boxplot summarises a distribution as five numbers: median, quartiles, whiskers. A strip plot shows every observation as a jittered dot. A violin plot shows the kernel density mirrored around a vertical axis. Layered together, as in @fig-type-distribution, they cover the full vocabulary: median for the centre, IQR for the spread, individual points for outliers and sample size, and the violin's silhouette for shape. For small groups (n < 30), drop the box and just show the points; the percentile machinery is unstable. Use this combination for comparing the distribution of a continuous variable across two or more groups. The temptation to replace the whole layered chart with a bar of means and an error whisker is the failure mode in @fig-meanbar.
 
-![Layered box, strip, and violin plot of DBP at baseline by treatment arm.](figures/type-02-distribution.png){#fig-type-distribution}
+![Layered box, strip, and violin plot of DBP at baseline by treatment arm.](notes/dataviz/figures/type-02-distribution.png){#fig-type-distribution}
 
 > [!note]
 ## Code
@@ -208,7 +208,7 @@ sns.despine(); fig.tight_layout()
 
 A scatter plot puts two continuous variables on the two axes and one dot per observation. Every point is its own evidence; the chart is the most direct depiction of a bivariate relationship in statistics. A regression line with a confidence ribbon, as in @fig-type-scatter, summarises the trend without erasing the underlying spread; a third variable can be encoded with colour or shape. Use scatter for any pair of continuous variables: SBP versus DBP, age versus a lab value, dose versus response. The failure mode at large n is overplotting; alpha transparency, hex-binning (`geom_hex`), or 2D density contours all help.
 
-![Scatter plot of SBP against DBP at baseline with a linear regression overlay and 95% confidence ribbon.](figures/type-03-scatter.png){#fig-type-scatter}
+![Scatter plot of SBP against DBP at baseline with a linear regression overlay and 95% confidence ribbon.](notes/dataviz/figures/type-03-scatter.png){#fig-type-scatter}
 
 > [!note]
 ## Code
@@ -248,7 +248,7 @@ sns.despine(); fig.tight_layout()
 
 A line plot connects points across an ordered x-axis (usually time, visit, or dose) so that the trajectory itself is the visual unit. Where a scatter or bar tells you "where", a line tells you "where, then where, then where", and the eye reads the slope pre-attentively. @fig-type-line shows the mean SBP per arm across the four study visits. Use line plots for longitudinal cohort means, time series of an outcome by group, and dose-response curves. The two failure modes have their own pairs in this note: too many lines on one panel (the spaghetti pitfall, @fig-spaghetti) and the two-axis trap (@fig-dualaxis).
 
-![Line plot of mean SBP per treatment over the six-month follow-up.](figures/type-04-line.png){#fig-type-line}
+![Line plot of mean SBP per treatment over the six-month follow-up.](notes/dataviz/figures/type-04-line.png){#fig-type-line}
 
 > [!note]
 ## Code
@@ -290,7 +290,7 @@ sns.despine(); fig.tight_layout()
 
 A forest plot puts one effect-size estimate per row, each with its 95 % confidence interval drawn as a horizontal whisker. The reader sees the point estimate and its precision in a single glance, and a vertical reference line at zero (or 1 for ratios) does the rhetorical work of "is this difference compatible with no effect?". @fig-type-forest shows the effect of each active arm versus placebo on six-month SBP change. Forest plots are central to clinical research: subgroup analyses, regression coefficients, and meta-analyses all live in this format. Watch for stretched x-axes that make small effects look substantial, and report the test statistic alongside the interval.
 
-![Forest plot of mean Δ SBP versus Placebo by treatment arm; whiskers are 95% confidence intervals.](figures/type-05-forest.png){#fig-type-forest}
+![Forest plot of mean Δ SBP versus Placebo by treatment arm; whiskers are 95% confidence intervals.](notes/dataviz/figures/type-05-forest.png){#fig-type-forest}
 
 > [!note]
 ## Code
@@ -360,7 +360,7 @@ sns.despine(); fig.tight_layout()
 
 A Kaplan–Meier curve plots the proportion of the cohort still event-free over time, dropping in steps as events occur. Censoring (loss to follow-up) is shown by tick marks. Two or more groups can be overlaid for direct comparison of survival or event-free trajectories. @fig-type-km shows time to BP control across the four arms, computed via `survival::survfit()` with synthetic event times. Use it for time-to-event outcomes: death, hospitalisation, recurrence, or any "first time the outcome happened" measure. The classic missing element in published KM plots is the *number-at-risk* table below the x-axis; without it, the visual confidence in the right-hand tail can far exceed the actual sample size.
 
-![Kaplan–Meier curve of the proportion still uncontrolled over six months, by treatment arm.](figures/type-06-km.png){#fig-type-km}
+![Kaplan–Meier curve of the proportion still uncontrolled over six months, by treatment arm.](notes/dataviz/figures/type-06-km.png){#fig-type-km}
 
 > [!note]
 ## Code
@@ -419,9 +419,9 @@ With the toolkit in hand, the next move is to know how each tool fails. Each pai
 
 The pie chart is the bad chart most often defended in health research. The eye is poor at angle judgement, and slices that differ by only a few percentage points are nearly indistinguishable. A horizontal bar chart ordered by frequency replaces angle judgement with position on a common scale, the strongest visual encoding available [@cleveland1984graphical]. Compare @fig-pie with @fig-bar.
 
-![Pie chart of BP class at six months. Which slice is bigger, Pre-hypertension or Stage 2? Now check the numbers.](figures/01-pie-bad.png){#fig-pie}
+![Pie chart of BP class at six months. Which slice is bigger, Pre-hypertension or Stage 2? Now check the numbers.](notes/dataviz/figures/01-pie-bad.png){#fig-pie}
 
-![The same data as a sorted horizontal bar with counts and percentages. The answer is immediate.](figures/01-bar-good.png){#fig-bar}
+![The same data as a sorted horizontal bar with counts and percentages. The answer is immediate.](notes/dataviz/figures/01-bar-good.png){#fig-bar}
 
 > [!note]
 ## Code
@@ -473,9 +473,9 @@ sns.despine(); fig.tight_layout()
 
 The default `rainbow()` palette stays popular in scientific computing despite being non-monotonic in luminance: yellow is brighter than red and green, and the eye reads brightness as magnitude. A sequential ramp (light to dark) maps luminance and value onto the same axis, so bigger means darker without ambiguity. The Pequod `log-cool` palette is one such ramp; viridis is another. Compare the same heatmap rendered both ways, @fig-rainbow against @fig-sequential.
 
-![Mean SBP reduction by age and BMI band, rainbow palette. The eye fights the palette every time it tries to read magnitude.](figures/02-rainbow-ugly.png){#fig-rainbow}
+![Mean SBP reduction by age and BMI band, rainbow palette. The eye fights the palette every time it tries to read magnitude.](notes/dataviz/figures/02-rainbow-ugly.png){#fig-rainbow}
 
-![Same data on Pequod's `log-cool` ramp. One luminance axis, one mental model.](figures/02-sequential-good.png){#fig-sequential}
+![Same data on Pequod's `log-cool` ramp. One luminance axis, one mental model.](notes/dataviz/figures/02-sequential-good.png){#fig-sequential}
 
 > [!note]
 ## Code
@@ -534,9 +534,9 @@ fig.tight_layout()
 
 This is the single most common dishonest figure in clinical journals. Pick a y-axis that starts somewhere convenient (132 mmHg in the example below) and a 10-mmHg gap looks like a chasm. The numbers are right; the visual claim is wrong. Tufte calls this a *lie factor* [@tufte2001visual], Wilke calls it *proportional ink* [@wilke2019fundamentals]. The fix is to anchor at zero whenever the y-axis encodes magnitude with bar length. If the differences then look small, the differences *are* small, and the chart should say so. @fig-truncated and @fig-honest plot the same four numbers.
 
-![Mean SBP at six months by treatment, y-axis starting at 132 mmHg. Placebo looks twice the height of ACEi; the actual difference is about 10 mmHg.](figures/03-truncated-wrong.png){#fig-truncated}
+![Mean SBP at six months by treatment, y-axis starting at 132 mmHg. Placebo looks twice the height of ACEi; the actual difference is about 10 mmHg.](notes/dataviz/figures/03-truncated-wrong.png){#fig-truncated}
 
-![Same numbers, zero-anchored. The eye reads proportional differences honestly.](figures/03-honest-good.png){#fig-honest}
+![Same numbers, zero-anchored. The eye reads proportional differences honestly.](notes/dataviz/figures/03-honest-good.png){#fig-honest}
 
 > [!warning]
 ## When truncation is honest
@@ -594,9 +594,9 @@ sns.despine(); fig.tight_layout()
 
 A row of pies or donuts asks the reader to compare angles across panels. Each donut is its own coordinate system, and the eye cannot triangulate between them. A dot plot puts every group on a single common scale, sortable by effect, and the comparison becomes automatic. The same data appears in @fig-donut and @fig-dotplot.
 
-![Four donuts, one per treatment, showing the proportion controlled at six months. Which arm is highest? Which two are tied?](figures/04-3d-ugly.png){#fig-donut}
+![Four donuts, one per treatment, showing the proportion controlled at six months. Which arm is highest? Which two are tied?](notes/dataviz/figures/04-3d-ugly.png){#fig-donut}
 
-![A dot plot of the same percentages. ACEi tops the list. ARB and CCB are within a percentage point of each other. The visual ranking matches the numerical one.](figures/04-dotplot-good.png){#fig-dotplot}
+![A dot plot of the same percentages. ACEi tops the list. ARB and CCB are within a percentage point of each other. The visual ranking matches the numerical one.](notes/dataviz/figures/04-dotplot-good.png){#fig-dotplot}
 
 > [!note]
 ## Code
@@ -653,9 +653,9 @@ sns.despine(); fig.tight_layout()
 
 A second y-axis is the rare chart sin that works against the reader without lying. It invents a relationship by drawing two lines on top of each other; whether the eye reads BMI as "above" or "below" SBP depends entirely on the secondary scale you happened to pick. Two trends that are statistically uncorrelated can be made to look identical, and two that are perfectly correlated can be made to look opposed. Small multiples solve this without effort: each variable gets its own panel and its own axis, and the comparison stays a comparison rather than a coincidence. See @fig-dualaxis and @fig-smallmult.
 
-![SBP and BMI by age band on a dual-axis chart. The two lines look correlated; they barely are.](figures/05-dualaxis-bad.png){#fig-dualaxis}
+![SBP and BMI by age band on a dual-axis chart. The two lines look correlated; they barely are.](notes/dataviz/figures/05-dualaxis-bad.png){#fig-dualaxis}
 
-![Same data, two panels, free y-axes. The shapes of the two trends become legible separately.](figures/05-smallmult-good.png){#fig-smallmult}
+![Same data, two panels, free y-axes. The shapes of the two trends become legible separately.](notes/dataviz/figures/05-smallmult-good.png){#fig-smallmult}
 
 > [!note]
 ## Code
@@ -704,9 +704,9 @@ g.set_axis_labels("Age band", "")
 
 Bar charts of means with error whiskers are the most-criticised chart pattern in modern statistics. They imply a symmetric sampling distribution that often does not exist, hide the sample size, and hide the outliers. Weissgerber and colleagues showed that distinct distributions can produce visually identical bar-and-whisker plots [@weissgerber2015beyond]. The fix is to show the data: a box plot, a strip plot, a violin, or any combination thereof. A mean is a single number; the distribution is what determines whether that number is informative. @fig-meanbar collapses the four arms into a single statistic; @fig-distribution shows what is actually there.
 
-![Mean SBP per treatment as a bar with SE whiskers. Sample size is invisible, skew is invisible, outliers are invisible.](figures/06-bar-mean-bad.png){#fig-meanbar}
+![Mean SBP per treatment as a bar with SE whiskers. Sample size is invisible, skew is invisible, outliers are invisible.](notes/dataviz/figures/06-bar-mean-bad.png){#fig-meanbar}
 
-![Same data as a boxplot with jittered points and median markers. Spread, centre, and n become visible at once.](figures/06-distribution-good.png){#fig-distribution}
+![Same data as a boxplot with jittered points and median markers. Spread, centre, and n become visible at once.](notes/dataviz/figures/06-distribution-good.png){#fig-distribution}
 
 > [!note]
 ## Code
@@ -750,9 +750,9 @@ sns.despine(); fig.tight_layout()
 
 A spaghetti plot of every patient's trajectory has its uses: it is the right chart when the message is heterogeneity. For showing a treatment effect, it makes the reader work harder than necessary. Faceting the spaghetti by treatment and overlaying the group mean keeps the heterogeneity visible while letting the average do the rhetorical work, as in the move from @fig-spaghetti to @fig-faceted.
 
-![One hundred and twenty SBP trajectories on a single panel, coloured by treatment. The group signal is buried in the noise.](figures/07-spaghetti-ugly.png){#fig-spaghetti}
+![One hundred and twenty SBP trajectories on a single panel, coloured by treatment. The group signal is buried in the noise.](notes/dataviz/figures/07-spaghetti-ugly.png){#fig-spaghetti}
 
-![Same data faceted by treatment with the group mean overlaid. The shape of each response becomes legible.](figures/07-smallmult-mean-good.png){#fig-faceted}
+![Same data faceted by treatment with the group mean overlaid. The shape of each response becomes legible.](notes/dataviz/figures/07-smallmult-mean-good.png){#fig-faceted}
 
 > [!note]
 ## Code
@@ -838,7 +838,7 @@ The palette has documented colour-vision-deficiency collapses (Pip ↔ Stubb und
 
 ## Using AI tools for figures
 
-Generative tools are now routinely used to draft figures, write the code that produces them, and refine the layout. The principle from the [scientific writing note](/notes/sw/#using-ai-tools-responsibly) carries over.
+Generative tools are now routinely used to draft figures, write the code that produces them, and refine the layout. The principle from the [[notes/sw#using-ai-tools-responsibly|scientific writing note]] carries over.
 
 Code suggestions for plot construction (drafting a `ggplot` call from a verbal description) are equivalent to language editing. Disclose when the journal asks; review every line before you commit it. Figure generation by an image model ("render a forest plot of these effect sizes") must be disclosed and is increasingly scrutinised. The figure must come from your data, not from a model's reconstruction of what such a figure usually looks like. Fabricating data, units, or annotations is misconduct, and the figure is the easiest place for fabrication to slip in. Every label, every n, every confidence interval comes from the analysis.
 

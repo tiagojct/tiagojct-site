@@ -42,11 +42,11 @@ An RStudio Project is simply a folder with an `.Rproj` file that RStudio recogni
 
 `File -> New Project -> New Directory -> New Project`
 
-![Just click there. Easy!](rstudio-new-proj.png)
+![Just click there. Easy!](notes/rst-bp/rstudio-new-proj.png))
 
 Give it a clear name and choose a sensible location. Every important analysis deserves its own project: a clinical study, a coursework assignment, a data cleaning task.
 
-![You can either choose to create a new folder or an existing one](rstudio-new-proj-window.png)
+![You can either choose to create a new folder or an existing one](notes/rst-bp/rstudio-new-proj-window.png))
 
 ### Suggested folder structure
 
@@ -79,7 +79,7 @@ To disable this permanently:
 - "Restore .RData into workspace at startup": **uncheck**
 - "Save workspace to .RData on exit": **Never**
 
-![RStudio Global Options: Workspace settings](rstudio-prefs.png)
+![RStudio Global Options: Workspace settings](notes/rst-bp/rstudio-prefs.png))
 
 ## 3. Write code that reads well
 
@@ -127,7 +127,7 @@ summary(patient_data)
                 NA's   :12                                  
 ```
 
-![Navigation outline](rstudio-nav.png)
+![Navigation outline](notes/rst-bp/rstudio-nav.png))
 
 This creates a navigable outline, which is very helpful in longer scripts.
 
@@ -242,7 +242,7 @@ To make the shortcut `Ctrl/Cmd + Shift + M` insert the native pipe:
 
 `Tools -> Global Options -> Code -> Use native pipe operator, |>`
 
-![Native pipe operator](rstudio-native-pipe.png)
+![Native pipe operator](notes/rst-bp/rstudio-native-pipe.png))
 
 ### Visual tweaks
 
@@ -250,7 +250,7 @@ I like to turn on the line highlighting and the rainbow brackets in RStudio; it'
 
 `Tools -> Global Options -> Code -> Display`
 
-![Line highlighting and rainbow brackets](rstudio-hlline-rainbow.png)
+![Line highlighting and rainbow brackets](notes/rst-bp/rstudio-hlline-rainbow.png))
 
 ## 7. Install packages once, load them every time
 
@@ -352,4 +352,4 @@ If you adopt only one practice from this list, make it **RStudio Projects**. The
 - [GitHub for health researchers](/notes/github/): share your project, collaborate, and use GitHub Actions to run an analysis pipeline on push.
 - [OpenCode: an AI research assistant in your terminal](/notes/opencode/): for R debugging and pipeline generation with an agent that can read your scripts and data directly.
 
-If you have any comments or questions, feel free to [reach out](mailto:tiagojacinto@med.up.pt).
+If you have any comments or questions, feel free to [reach out](mailto:tiagojacinto@med.up.pt)).

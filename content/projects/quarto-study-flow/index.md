@@ -89,23 +89,23 @@ This is just Quarto's standard `:::{#fig-id}` syntax for any custom figure conte
 
 CONSORT 2025:
 
-![CONSORT example](consort.png)
+![CONSORT example](projects/quarto-study-flow/consort.png))
 
 PRISMA 2020 (with an optional parallel column for grey-literature and citation-search identification, matching the PRISMA 2020 v2 template):
 
-![PRISMA example](prisma.png)
+![PRISMA example](projects/quarto-study-flow/prisma.png))
 
 STARD 2015 (with the canonical 2×2 contingency grid at the bottom):
 
-![STARD example](stard.png)
+![STARD example](projects/quarto-study-flow/stard.png))
 
 TRIPOD+AI 2024 (with development and external validation cohorts):
 
-![TRIPOD example](tripod.png)
+![TRIPOD example](projects/quarto-study-flow/tripod.png))
 
 STROBE (with optional excluded-from-eligible and excluded-from-enrolled sidebars):
 
-![STROBE example](strobe.png)
+![STROBE example](projects/quarto-study-flow/strobe.png))
 
 ## Why I built it
 

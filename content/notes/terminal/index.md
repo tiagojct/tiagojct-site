@@ -33,7 +33,7 @@ The Wikipedia page on the [Command-line interface](https://en.wikipedia.org/wiki
 
 **macOS:** `Applications > Utilities > Terminal`, or `Cmd + Space` → type `Terminal`. The default shell is zsh.
 
-![Terminal in macOS](terminal-macos.png)
+![Terminal in macOS](notes/terminal/terminal-macos.png))
 
 **Linux:** `Ctrl + Alt + T` on most distributions. Default shell is usually bash.
 
@@ -521,4 +521,4 @@ The next step is putting your project under version control. The [next post](/no
 - [GitHub for health researchers](/notes/github/): publish your work and access real public health datasets.
 - [OpenCode: an AI research assistant in your terminal](/notes/opencode/): once the terminal is familiar, OpenCode lets you drive a research project by natural-language instructions while seeing every file change.
 
-If you have any comments or questions, feel free to [reach out](mailto:tiagojacinto@med.up.pt).
+If you have any comments or questions, feel free to [reach out](mailto:tiagojacinto@med.up.pt)).

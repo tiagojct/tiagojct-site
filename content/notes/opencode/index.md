@@ -551,4 +551,4 @@ This can be part of a Makefile or a GitHub Actions workflow; for example, automa
 
 The rule of thumb: if you would normally paste a file into a chat window to get help with it, OpenCode can do the same thing, but with access to all your files at once, the ability to run things, and no copy-paste.
 
-If you have any comments or questions, feel free to [reach out](mailto:tiagojacinto@med.up.pt).
+If you have any comments or questions, feel free to [reach out](mailto:tiagojacinto@med.up.pt)).

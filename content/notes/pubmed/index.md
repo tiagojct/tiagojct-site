@@ -46,7 +46,7 @@ The second reason to prefer PubMed is reproducibility. A query in PubMed can be 
 
 When you type words into the PubMed search box, PubMed does not match them as a literal string. It runs your input through **Automatic Term Mapping** (ATM): it tries the phrase as a MeSH term, then as a journal title, then as an author, and finally as a set of text words across title and abstract [@nlmatm2024]. The result is a translated query, joined with `AND`, that may look little like what you typed.
 
-![Automatic Term Mapping in action. PubMed expands each token of your raw query into a MeSH term (when one exists) plus a text-word fallback, then joins the resulting blocks with `AND`. The Search Details panel, at the bottom of the figure, exposes the translated query and is the single most important habit a new searcher can pick up.](figures/query-anatomy.svg){fig-align="center"}
+![Automatic Term Mapping in action. PubMed expands each token of your raw query into a MeSH term (when one exists) plus a text-word fallback, then joins the resulting blocks with `AND`. The Search Details panel, at the bottom of the figure, exposes the translated query and is the single most important habit a new searcher can pick up.](notes/pubmed/figures/query-anatomy.svg){fig-align="center"}
 
 ATM is also why a "simple" search often returns thousands of hits. PubMed has OR'd together MeSH expansions, plurals, and synonyms on your behalf without showing you the working. The Search Details panel shows you exactly what it did.
 
@@ -164,7 +164,7 @@ PubMed now emails you new hits matching that exact query, every week, forever, f
 
 ## The eight-step recipe, on one page
 
-![The full recipe, from a clinical question to references in Zotero with new evidence arriving by email. Adapt it; do not memorise it.](figures/search-recipe.svg){fig-align="center"}
+![The full recipe, from a clinical question to references in Zotero with new evidence arriving by email. Adapt it; do not memorise it.](notes/pubmed/figures/search-recipe.svg){fig-align="center"}
 
 The recipe is mechanical on purpose. Most of the variance in *which* papers you find sits in steps 2 and 3 (the MeSH lookup and the block design). Steps 5–7 are administrative. Step 8 is what makes the whole thing worth doing again next week.
 
@@ -186,7 +186,7 @@ The *Cochrane Library* is the right place to look for a Cochrane systematic revi
 
 A new layer of tools sits between you and the underlying databases. They help with discovery; they do not replace citations.
 
-![What the major AI scouts are actually good at, and where the PubMed verification step has to sit. The arrow back from Undermind to PubMed is illustrative; *every* scout output gets verified, not just one.](figures/ai-vs-pubmed.svg){fig-align="center"}
+![What the major AI scouts are actually good at, and where the PubMed verification step has to sit. The arrow back from Undermind to PubMed is illustrative; *every* scout output gets verified, not just one.](notes/pubmed/figures/ai-vs-pubmed.svg){fig-align="center"}
 
 *Elicit* is good at extracting structured fields (sample size, outcome, effect estimate) across hundreds of papers from one natural-language question. It is useful for first-pass scoping.
 

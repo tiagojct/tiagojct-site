@@ -488,4 +488,4 @@ None of these features require setup beyond what you already have. `git stash`, 
 
 When an AI agent starts making many changes to a repository, these tools earn their keep quickly; see the [OpenCode post](/notes/opencode/) for how branches, `stash`, and `bisect` pair with agent-driven revision cycles.
 
-If you have any comments or questions, feel free to [reach out](mailto:tiagojacinto@med.up.pt).
+If you have any comments or questions, feel free to [reach out](mailto:tiagojacinto@med.up.pt)).
